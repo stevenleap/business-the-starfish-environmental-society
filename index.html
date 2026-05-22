@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="The Starfish Environmental Society nonprofit homepage for VICTORIA, BC." name="description"/>
+<meta content="The Starfish Environmental Society" property="og:title"/>
+<meta content="The Starfish Environmental Society: cultivating the next generation of environmental changemakers through education, recognition, and community." property="og:description"/>
+<meta content="https://images.pexels.com/photos/10535387/pexels-photo-10535387.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" property="og:image"/>
+<title>The Starfish Environmental Society</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --primary: #2E5B6B;
+      --secondary: #7BA7A0;
+      --accent: #D96C4A;
+      --text: #1A2B34;
+      --background: #F4F0E6;
+      --muted: #E6DFD0;
+      --line: rgba(17, 24, 39, 0.13);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Nunito", sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      font-family: "Playfair Display", sans-serif;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+    .hero {
+      min-height: 74vh;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(17, 24, 39, 0.82), rgba(17, 24, 39, 0.42)),
+        url("https://images.pexels.com/photos/10535387/pexels-photo-10535387.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940") center/cover no-repeat;
+      color: white;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.55fr);
+      gap: 32px;
+      align-items: end;
+      padding: 88px 0 72px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--accent);
+      margin: 0 0 10px;
+    }
+    h1, h2, h3 {
+      font-family: "Playfair Display", sans-serif;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    h1 {
+      font-size: clamp(2.35rem, 6vw, 5.5rem);
+      max-width: 12ch;
+      margin: 0 0 18px;
+    }
+    .hero-copy {
+      max-width: 760px;
+      font-size: 1.08rem;
+      margin: 0 0 26px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button.primary { background: var(--accent); color: #111827; }
+    .button.secondary { border: 1px solid rgba(255,255,255,0.5); color: white; }
+    .field-card {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .field-card p { margin: 0; }
+    .info-strip {
+      margin: -34px auto 0;
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      border: 1px solid var(--line);
+      background: white;
+      box-shadow: 0 18px 50px rgba(17,24,39,0.12);
+    }
+    .info-strip article {
+      padding: 18px;
+      min-height: 90px;
+      border-right: 1px solid var(--line);
+      display: grid;
+      align-content: center;
+      gap: 4px;
+    }
+    .info-strip span, .links-panel span {
+      color: rgba(17,24,39,0.62);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .info-strip strong, .info-strip a {
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    section { padding: 68px 0; }
+    .section-title {
+      font-size: clamp(1.9rem, 4vw, 3.7rem);
+      margin: 0 0 14px;
+    }
+    .section-copy {
+      max-width: 780px;
+      margin: 0 0 28px;
+      color: rgba(17,24,39,0.78);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .paper {
+      background: var(--muted);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .program {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .program img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .program h3, .program p {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .program p { margin-bottom: 22px; }
+    .clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .clean li {
+      padding-left: 18px;
+      border-left: 4px solid var(--accent);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr 0.9fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+      gap: 28px;
+    }
+    .contact-form {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      font: inherit;
+    }
+    button {
+      min-height: 46px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      padding: 12px 18px;
+      cursor: pointer;
+    }
+    .links-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      background: white;
+    }
+    .links-panel p {
+      display: grid;
+      gap: 3px;
+      margin: 0 0 16px;
+    }
+    .links-panel a {
+      color: var(--primary);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      background: var(--secondary);
+      color: white;
+      padding: 40px 0;
+    }
+    footer a { color: white; }
+    @media (max-width: 900px) {
+      .hero-inner, .split, .contact-grid { grid-template-columns: 1fr; }
+      .program-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { min-height: 210px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<div class="brand">The Starfish Environmental Society</div>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="wrap hero-inner">
+<div>
+<p class="eyebrow">The Starfish Environmental Society: cultivating the next generation of environmental changemakers through education, recognition, and community.</p>
+<h1>Cultivating Environmental Changemakers</h1>
+<p class="hero-copy">THE STARFISH ENVIRONMENTAL SOCIETY CONTINUED TO ORGANIZE AND CARY ON EDUCATIONAL SEMINARS AND EVENTS TO INCREASE THE PUBLICâS UNDERSTANDING OF THE ENVIRONMENT AND ITS IMPORTANCE. WE ALSO PROVIDED AWARDS TO YOUTH AND YOUNG ADULTS WHO HAVE DEMONSTRATED A COMMITMENT TO CREATING POSITIVE ENVIRONMENTAL CHANGE.
+
+THE STARFISH ENVIRONMENTAL SOCIETY NOW ALSO RUNS AS ANNUAL YOUTH ENVIRONMENTAL CHANGEMAKERS SUMMIT WHICH CONVENES 75 CLIMATE LEADERS IN-PERSON ANNUALLY TO SUPPORT THEIR LEARNING AND DEVEL</p>
+<div class="cta-row">
+<a class="button primary" href="#programs">Explore Our Programs</a>
+<a class="button secondary" href="#summary">Read the Summary</a>
+</div>
+</div>
+<aside class="field-card">
+<p><strong>Caller note:</strong> this page gathers the imported nonprofit facts into one fast summary for outreach.</p>
+</aside>
+</div>
+</section>
+<div class="wrap info-strip"><article><span>Registration</span><strong>806422630RR0001</strong></article><article><span>Category</span><strong>Category 170</strong></article><article><span>Listed area</span><strong>VICTORIA, BC</strong></article><article><span>Current website</span><a href="https://thestarfish.ca" rel="noreferrer" target="_blank">Open site</a></article><article><span>Source profile</span><a href="https://www.facebook.com/thestarfishcanada" rel="noreferrer" target="_blank">Open source</a></article></div>
+<section id="summary">
+<div class="wrap split">
+<div>
+<h2 class="section-title">The work in one place</h2>
+<p class="section-copy">THE STARFISH ENVIRONMENTAL SOCIETY CONTINUED TO ORGANIZE AND CARY ON EDUCATIONAL SEMINARS AND EVENTS TO INCREASE THE PUBLICâS UNDERSTANDING OF THE ENVIRONMENT AND ITS IMPORTANCE. WE ALSO PROVIDED AWARDS TO YOUTH AND YOUNG ADULTS WHO HAVE DEMONSTRATED A COMMITMENT TO CREATING POSITIVE ENVIRONMENTAL CHANGE.
+
+THE STARFISH ENVIRONMENTAL SOCIETY NOW ALSO RUNS AS ANNUAL YOUTH ENVIRONMENTAL CHANGEMAKERS SUMMIT WHICH CONVENES 75 CLIMATE LEADERS IN-PERSON ANNUALLY TO SUPPORT THEIR LEARNING AND DEVEL</p>
+<ul class="clean"><li>Focused on youth and young adults</li><li>Annual summit for climate leaders</li><li>Awards for environmental commitment</li><li>Community-based in Victoria, BC</li></ul>
+</div>
+<img alt="Community nonprofit planning" loading="lazy" src="https://images.pexels.com/photos/2561628/pexels-photo-2561628.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px"/>
+</div>
+</section>
+<section class="paper" id="programs">
+<div class="wrap">
+<h2 class="section-title">Program and contact paths</h2>
+<p class="section-copy">The site uses only the supplied organization record, then organizes it so a supporter, donor, or caller can act faster.</p>
+<div class="program-grid"><article class="program"><img alt="Environmental Education Seminars" height="675" loading="lazy" src="https://images.pexels.com/photos/7692681/pexels-photo-7692681.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/><h3>Environmental Education Seminars</h3><p>We organize seminars and events to increase public understanding of the environment and its importance.</p></article><article class="program"><img alt="Youth Changemakers Summit" height="675" loading="lazy" src="https://images.pexels.com/photos/9433170/pexels-photo-9433170.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/><h3>Youth Changemakers Summit</h3><p>An annual in-person summit convening 75 young climate leaders to support their learning and development.</p></article><article class="program"><img alt="Youth Environmental Awards" height="675" loading="lazy" src="https://images.pexels.com/photos/12117345/pexels-photo-12117345.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/><h3>Youth Environmental Awards</h3><p>Awards recognizing youth and young adults who demonstrate a commitment to creating positive environmental change.</p></article><article class="program"><img alt="Get Involved" height="675" loading="lazy" src="https://images.unsplash.com/photo-1583749063749-423914dce445?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MzQ1NzV8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBjbGVhbmluZyUyMGElMjBiZWFjaCUyMHNob3JlbGluZXxlbnwwfDB8fHwxNzc5NDkzNzg0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" width="1200"/><h3>Get Involved</h3><p>Support our mission through volunteering, donations, or spreading the word about our programs.</p></article></div>
+</div>
+</section>
+<section>
+<div class="wrap">
+<h2 class="section-title">Community context</h2>
+<p class="section-copy">Based in Victoria, BC, Canada.</p>
+<div class="gallery"><img alt="gallery 1" height="675" loading="lazy" src="https://images.unsplash.com/photo-1769101146373-e2b5468f885a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MzQ1NzV8MHwxfHNlYXJjaHwxfHxjbG9zZS11cCUyMG9mJTIwYSUyMHN0YXJmaXNoJTIwaW4lMjBhJTIwdGlkZSUyMHBvb2x8ZW58MHwwfHx8MTc3OTQ5Mzc4NXww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" width="1200"/><img alt="gallery 2" height="675" loading="lazy" src="https://images.pexels.com/photos/29708258/pexels-photo-29708258.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/><img alt="gallery 3" height="675" loading="lazy" src="https://images.unsplash.com/photo-1646337038283-4a8a302b0a3c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MzQ1NzV8MHwxfHNlYXJjaHwxfHxncm91cCUyMG9mJTIwdGVlbmFnZXJzJTIwaGlraW5nJTIwaW4lMjBhJTIwZm9yZXN0fGVufDB8MHx8fDE3Nzk0OTM3ODZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" width="1200"/><img alt="gallery 4" height="675" loading="lazy" src="https://images.unsplash.com/photo-1758540709434-3ca702f84102?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MzQ1NzV8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJzJTIwc29ydGluZyUyMHJlY3ljbGFibGVzJTIwYXQlMjBhJTIwY29tbXVuaXR5JTIwZXZlbnR8ZW58MHwwfHx8MTc3OTQ5Mzc4N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" width="1200"/></div>
+</div>
+</section>
+<section class="paper">
+<div class="wrap">
+<h2 class="section-title">What happens next</h2>
+<ul class="clean">
+<li>Call or email with the reason for reaching out.</li>
+<li>Ask about the program, donation, volunteer, or support details.</li>
+<li>Confirm the contact path from the organization record.</li>
+</ul>
+</div>
+</section>
+<section id="contact">
+<div class="wrap contact-grid">
+<div>
+<h2 class="section-title">Contact The Starfish Environmental Society</h2>
+<p class="section-copy">Use the saved details below when calling, emailing, or checking the original organization links.</p>
+<form action="mailto:info@thestarfish.ca" class="contact-form" enctype="text/plain" method="post">
+<input name="Name" placeholder="Name" required="" type="text"/>
+<input name="Email" placeholder="Email" required="" type="email"/>
+<input name="Phone" placeholder="Phone" type="tel"/>
+<textarea name="Message" placeholder="How would you like to connect?" required="" rows="5"></textarea>
+<button type="submit">Send email</button>
+</form>
+</div>
+<aside class="links-panel">
+<h3>Saved contact details</h3>
+<p><span>Current website</span><a href="https://thestarfish.ca" rel="noreferrer" target="_blank">https://thestarfish.ca</a></p><p><span>Facebook / source</span><a href="https://www.facebook.com/thestarfishcanada" rel="noreferrer" target="_blank">https://www.facebook.com/thestarfishcanada</a></p><p><span>Email</span><a href="mailto:info@thestarfish.ca" rel="noreferrer" target="_blank">info@thestarfish.ca</a></p><p><span>Phone</span><a href="tel:+4033921666" rel="noreferrer" target="_blank">(403) 392-1666</a></p>
+<p><span>Address</span><strong>PO BOX 35089 RPO HILLSIDE</strong></p>
+</aside>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p>The Starfish Environmental Society | VICTORIA, BC</p>
+<ul class="clean"><li><a href="https://www.pexels.com/photo/photo-of-a-boy-holding-a-rock-at-the-beach-10535387/" rel="noreferrer" target="_blank">Photos by cottonbro studio via Pexels</a></li><li><a href="https://www.pexels.com/photo/people-holding-banner-2561628/" rel="noreferrer" target="_blank">Photos by Vincent M.A. Janssen via Pexels</a></li><li><a href="https://www.pexels.com/photo/women-working-on-a-project-7692681/" rel="noreferrer" target="_blank">Photos by www.kaboompics.com via Pexels</a></li><li><a href="https://www.pexels.com/photo/colleagues-collaborating-on-a-work-9433170/" rel="noreferrer" target="_blank">Photos by Monstera Production via Pexels</a></li><li><a href="https://www.pexels.com/photo/a-person-holding-a-plant-with-soil-12117345/" rel="noreferrer" target="_blank">Photos by Tamara Elnova via Pexels</a></li><li><a href="https://unsplash.com/photos/brown-wooden-dock-on-sea-during-daytime-0iTZQGmQ-jk" rel="noreferrer" target="_blank">Photos by engin akyurt via Unsplash</a></li><li><a href="https://unsplash.com/photos/sea-urchins-and-anemones-in-a-tide-pool-hx6LMmLtAyM" rel="noreferrer" target="_blank">Photos by Joy McNamara via Unsplash</a></li><li><a href="https://www.pexels.com/photo/modern-conference-presentation-with-speaker-on-stage-29708258/" rel="noreferrer" target="_blank">Photos by Matheus Bertelli via Pexels</a></li><li><a href="https://unsplash.com/photos/a-group-of-people-walking-through-a-forest-hcHtyG3X52Q" rel="noreferrer" target="_blank">Photos by Nima Ganji via Unsplash</a></li><li><a href="https://unsplash.com/photos/people-arranging-offerings-on-a-street-_aA3e_uWGEg" rel="noreferrer" target="_blank">Photos by Kelvin Zyteng via Unsplash</a></li></ul>
+<p>© 2026 The Starfish Environmental Society</p>
+</div>
+</footer>
+</body>
+</html>
